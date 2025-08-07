@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul></ul>
+    <script>
+      let listData = [];
+      const ul = document.querySelector("ul");
+      const input = document.createElement("input");
+      const button = document.createElement("button");
+      const update = document.createElement("update");
+      const body = document.getElementsByTagName("body")[0];
+      const printInputValue = (value) => {
+        listData.push(value);
+      };
+      const render = () => {
+        ul.innerHTML = "";
+        listData.map((element, index) => {
+          const li = document.createElement("li");
+          const removeBtn = document.createElement("button");
+          const updateBtn = document.createElement("button");
+          updateBtn.innerText = "Edit";
+          updateBtn.addEventListener("click", () => {});
+          removeBtn.innerText = "remove";
+          removeBtn.addEventListener("click", () => {
+            const newListData = listData.filter((el, i) => {
+              return i !== index;
+            });
+            listData = newListData;
+            render();
+          });
+          li.innerText = element;
+          li.appendChild(updateBtn);
+          li.appendChild(removeBtn);
+          ul.appendChild(li);
+        });
+      };
+
+      input.placeholder = "ym oruul";
+      button.innerText = "click me";
+      button.addEventListener("click", () => {
+        if (input.value == "") {
+          alert("input empty");
+          prompt("input oruul");
+          return null;
+        } else {
+          printInputValue(input.value);
+          render();
+          input.value = "";
+        }
+      });
+      body.appendChild(update);
+      body.appendChild(input);
+      body.appendChild(button);
+    </script>
+  </body>
+</html>
