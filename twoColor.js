@@ -20,3 +20,23 @@ document.addEventListener("keydown", () => {
 });
 body.appendChild(red);
 body.appendChild(blue);
+
+const image = document.createElement("img");
+image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+
+const button = document.createElement("button");
+let isOn = false;
+button.innerText = "On";
+
+document.addEventListener("keydown", () => {
+  isOn = !isOn;
+
+  if ((isOn, event.code === "Space")) {
+    image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+  } else {
+    event.code === "Space";
+    image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+  }
+});
+
+body.appendChild(image);

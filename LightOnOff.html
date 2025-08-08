@@ -15,13 +15,14 @@
       let isOn = false;
       button.innerText = "On";
 
-      button.addEventListener("click", () => {
+      document.addEventListener("keydown", () => {
         isOn = !isOn;
         button.innerText = isOn ? "Off" : "On";
 
-        if (isOn) {
+        if ((isOn, event.code === "Space")) {
           image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
         } else {
+          event.code === "Space";
           image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
         }
       });
