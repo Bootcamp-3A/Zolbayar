@@ -1,35 +1,21 @@
-import chalk from "chalk";
+const card = document.createElement("class");
+const img = document.createElement("img");
+const body = document.getElementsByTagName("body")[0];
+const h6 = document.createElement("h6");
+const last = document.createElement("last");
+img.src =
+  "https://www.autoshippers.co.uk/blog/wp-content/uploads/bugatti-centodieci.jpg";
+img.style.width = "390px";
+card.className = "title";
+h6.className = "h6";
+last.className = "last";
+h6.innerText = "3 сая ₮";
+card.innerText = "Nissan Presage, 2000/2018";
+last.innerText = "Орж ирсэн мотор хроп сольсон сайхан өндөр гэр бүлийн";
+body.appendChild(img);
+body.appendChild(h6);
+body.appendChild(card);
+body.appendChild(last);
 
-const log = console.log;
-
-// Combine styled and normal strings
-log(chalk.blue("Hello") + " World" + chalk.red("!"));
-
-// Compose multiple styles using the chainable API
-log(chalk.blue.bgRed.bold("Hello world!"));
-
-// Pass in multiple arguments
-log(chalk.blue("Hello", "World!", "Foo", "bar", "biz", "baz"));
-
-// Nest styles
-log(chalk.red("Hello", chalk.underline.bgBlue("world") + "!"));
-
-// Nest styles of the same type even (color, underline, background)
-log(
-  chalk.green(
-    "I am a green line " +
-      chalk.blue.underline.bold("with a blue substring") +
-      " that becomes green again!"
-  )
-);
-
-// ES2015 template literal
-log(`
-CPU: ${chalk.red("90%")}
-RAM: ${chalk.green("40%")}
-DISK: ${chalk.yellow("70%")}
-`);
-
-// Use RGB colors in terminal emulators that support it.
-log(chalk.rgb(123, 45, 67).underline("Underlined reddish color"));
-log(chalk.hex("#DEADED").bold("Bold gray!"));
+console.log(body, "body");
+console.log(card, "title");
