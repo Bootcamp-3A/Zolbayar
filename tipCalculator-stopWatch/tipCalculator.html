@@ -20,15 +20,21 @@
     </div>
     <div class="card">
       <p class="main-text">Stopwatch</p>
+      <div class="info">Hour Min Sec</div>
+
       <p>
-        <span id="hr">00</span>
-        <span id="min">00</span>
-        <span id="sec">00</span>
-        <span id="count">00</span>
+        <span id="hr"></span>
+        <span id="min"></span>
+        <span id="sec"></span>
+        <span id="count"></span>
       </p>
-      <button class="submit-style" id="start">Start</button>
-      <button class="submit-style" id="stop">Stop</button>
-      <button class="submit-style" id="reset">Reset</button>
+      <button class="submit-style" id="start" onclick="startTimer()">
+        Start
+      </button>
+      <button class="submit-style" id="stop" onclick="stopTime()">Stop</button>
+      <button class="submit-style" id="reset" onclick="resetTimer()">
+        Reset
+      </button>
     </div>
   </body>
   <script src="./tipCalculator.js"></script>

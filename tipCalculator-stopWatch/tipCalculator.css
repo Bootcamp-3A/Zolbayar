@@ -12,14 +12,14 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  position: relative;
 }
 .card p {
   font-size: 50px;
 }
 .submit-style {
   height: 40px;
-  padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -32,4 +32,11 @@ body {
 .submit-style {
   width: 50px;
   background-color: aliceblue;
+}
+.info {
+  position: absolute;
+  font-size: 20px;
+  margin-bottom: 70px;
+  padding-right: 70px;
+  box-sizing: border-box;
 }
