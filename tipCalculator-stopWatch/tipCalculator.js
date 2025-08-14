@@ -108,9 +108,8 @@ counterHr.innerText = hr;
 counterCount.innerText = count;
 
 function addSecond() {
-  {
-    count++;
-  }
+  count++;
+
   if (count == 100) {
     second++;
     count = 0;
@@ -129,8 +128,11 @@ function addSecond() {
   counterHr.innerText = hr;
   counterCount.innerText = count;
 }
+interval = setInterval(addSecond, 10);
 
 function startTimer() {
+  clearInterval(interval);
+
   interval = setInterval(addSecond, 10);
 }
 function stopTime() {
