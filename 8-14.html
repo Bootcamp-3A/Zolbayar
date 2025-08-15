@@ -10,36 +10,47 @@
     <button id="start">Start</button>
 
     <script>
-      const body = document.getElementsByTagName("body")[0];
+      const quizStart = () => {};
+      let answer = [
+        ["answer1-1", "aswer1-2", "answer1-3", "answer1-4"],
+        ["answer2-1", "answer2-2", "answer2-3", "answer2-4"],
+        ["answer3-1", "answer3-2", "answer3-3", "answer3-4"],
+      ];
+      let question = ["Question1", "Question2", "Question3"];
+      const body = document.querySelector("body");
       const startBtn = document.getElementById("start");
       const question1 = document.getElementById("question1");
       const button1 = document.createElement("button");
       const button2 = document.createElement("button");
       const button3 = document.createElement("button");
       const button4 = document.createElement("button");
+      const button = button1;
+      button2;
+      button3;
+      button4;
       startBtn.addEventListener("click", () => {
         startBtn.remove();
-        question1.innerText = "True + False?";
-        button1.innerText = "NaN";
-        button2.innerText = "true";
-        button3.innerText = "false";
-        button4.innerText = "syntaxError";
+        question1.innerText = question[0];
+        button1.innerText = answer[0][0];
+        button2.innerText = answer[0][1];
+        button3.innerText = answer[0][2];
+        button4.innerText = answer[0][3];
         body.appendChild(button1);
         body.appendChild(button2);
         body.appendChild(button3);
         body.appendChild(button4);
         button4.addEventListener("click", () => {
-          question1.innerText = "Question 2";
-          button1.innerText = "1";
-          button2.innerText = "2";
-          button3.innerText = "3";
-          button4.innerText = "4";
+          question1.innerText = question[1];
+          button1.innerText = answer[1][0];
+          button2.innerText = answer[1][1];
+          button3.innerText = answer[1][2];
+          button4.innerText = answer[1][3];
           button2.addEventListener("click", () => {
-            question1.innerText = "Next Question";
-            button1.innerText = "ok";
-            button2.innerText = "yes";
-            button3.innerText = "no";
-            button4.innerText = "true";
+            question1.innerText = question[2];
+            button1.innerText = answer[2][0];
+            button2.innerText = answer[2][1];
+            button3.innerText = answer[2][2];
+            button4.innerText = answer[2][3];
           });
         });
       });
